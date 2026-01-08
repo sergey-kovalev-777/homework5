@@ -51,6 +51,9 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryDays = 1;
 
+        if(deliveryDistance < 0){
+            System.out.println("Неверные входные данные");
+        }
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней " + deliveryDays);
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
