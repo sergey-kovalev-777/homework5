@@ -10,15 +10,10 @@ public class Main {
 
         int clientOS = 1;
 
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-            break;
-            default:
-                System.out.println("");
+        if (clientOS ==0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         System.out.println("\nЗадача 2");
@@ -56,14 +51,12 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryDays = 1;
 
-        if (deliveryDistance <= 100) {
-            if (deliveryDistance <= 20) {
-                System.out.println("Потребуется дней " + deliveryDays);
-            } else if (deliveryDistance > 20 || deliveryDistance <= 60) {
-                System.out.println("Потребуется дней " + (deliveryDays +1));
-            } else {
-                System.out.println("Потребуется дней " + (deliveryDays +2));
-            }
+        if (deliveryDistance <= 20) {
+            System.out.println("Потребуется дней " + deliveryDays);
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            System.out.println("Потребуется дней " + (deliveryDays + 1));
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется дней " + (deliveryDays + 2));
         }
 
         System.out.println("\nЗадача 5");
